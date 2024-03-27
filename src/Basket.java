@@ -36,6 +36,7 @@ public class Basket {
         for (Map.Entry<StockItem, Integer> item : list.entrySet()) {
             item.getKey().setReserved(item.getKey().getReserved() - item.getValue());
         }
+        list.clear();
     }
 
     public Map<StockItem, Integer> Items() {

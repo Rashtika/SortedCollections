@@ -79,6 +79,7 @@ public class Main {
         barasBasket.checkOut();
 
         System.out.println(stockList);
+        System.out.println(barasBasket);
 
 
 
