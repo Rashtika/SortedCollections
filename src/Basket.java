@@ -23,7 +23,7 @@ public class Basket {
     }
 
     public int removeFromBasket(StockItem item, int quantity) {
-        if ((item != null) && (list.get(item) >= quantity)) {
+        if ((item != null) && (list.containsKey(item)) && (list.get(item) >= quantity)) {
             int inBasket = list.getOrDefault(item, 0);
             list.put(item, inBasket - quantity);
             item.returnItem(quantity);
@@ -51,6 +51,7 @@ public class Basket {
             s = s + item.getValue() + " " + item.getKey() + ". " + "\n";
             totalCost += item.getKey().getPrice() * item.getValue();
         }
-        return s + "Total cost " + totalCost;
+        return s + "Total cost " + String.format("%.2f",totalCost);
     }
 }
+

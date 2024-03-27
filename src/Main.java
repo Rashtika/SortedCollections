@@ -76,10 +76,13 @@ public class Main {
         barasBasket.removeFromBasket(stockList.get("juice"), 4);
         System.out.println(stockList);
         System.out.println(barasBasket);
+        barasBasket.removeFromBasket(stockList.get("door"), 1);
+
         barasBasket.checkOut();
 
         System.out.println(stockList);
         System.out.println(barasBasket);
+        System.out.println(timsBasket);
 
 
 
