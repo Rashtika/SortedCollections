@@ -84,6 +84,10 @@ public class Main {
         System.out.println(barasBasket);
         System.out.println(timsBasket);
 
+        timsBasket.removeAll();
+
+        System.out.println(stockList);
+        System.out.println(timsBasket);
 
 
     }

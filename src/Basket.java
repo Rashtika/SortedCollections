@@ -39,6 +39,14 @@ public class Basket {
         list.clear();
     }
 
+    public void removeAll () {
+        for (Map.Entry<StockItem, Integer> item : list.entrySet()) {
+            item.getKey().adjustStock(item.getValue());
+            item.getKey().setReserved(item.getKey().getReserved() - item.getValue());
+        }
+        list.clear();
+    }
+
     public Map<StockItem, Integer> Items() {
         return Collections.unmodifiableMap(list);
     }
